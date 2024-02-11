@@ -1,10 +1,135 @@
 .table{
     background-color: white;
-    margin: 0 auto;
+    margin: 3% auto;
     width: 75%;
-    margin-top: 3%;
-    margin-bottom: 3%;
     border-radius: 24px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+
+.table_container{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 7%;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table_settings{
+    display: flex;
+    margin-left: auto;
+}
+
+.table_settings_label{
+    padding-right: 8px;
+}
+
+.numberOfPages{
+    width: 47px;
+    height: 32px;
+    border: 1px solid #D0D3DA;
+    border-radius: 4px;
+}
+
+.table_settings_second{
+    margin-left: 16px;
+}
+
+.page{
+    width: 42px;
+    height: 32px;
+    border: 1px solid #D0D3DA;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.page::-webkit-outer-spin-button, .page::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.table_settings_second span{
+    color: #BCBFCC;
+}
+
+.table_settings_third{
+    margin-left: 22px;
+}
+
+.pagination_button{
+    width: 32px;
+    height: 32px;
+    background-color: #F8F8FA;
+    border: 1px solid #D0D3DA;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.prev_page{
+    background-image: url('./img/Vector-1.svg');
+}
+
+.next_page{
+    background-image: url('./img/Vector.svg');
+}
+
+/* Кнопка */
+.table_button{
+    background-color: #C06ECC;
+    border: 1px solid #BD68CA;
+    border-radius: 8px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    margin-top: 24px;
+}
+
+/* Шапка туду листов */
+.table_header{
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F8FA;
+    border-bottom: 1px solid #EBECEF;
+    border-top: 1px solid #EBECEF;
+    color: #737680;
+}
+
+.checkbox_container{
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
+    width: 16px;
+    height: 16px;
+}
+
+.category_container{
+    width: 25%;
+}
+
+.subcategory_container{
+    width: 20%;
+}
+
+.brand_container{
+    width: 20%;
+}
+
+.goods_container{
+    width: 25%;
+}
+
+.cashback_container{
+    width: 7%;
 }
