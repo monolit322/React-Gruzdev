@@ -1,8 +1,14 @@
 import React from "react";
-import "./style.css";
+import { useState } from "react";
+
 import Todo from "./components/todo/todo";
+import Modal from "./components/Modal/modal";
+
+import "./style.css";
 
 const TableTask = () => {
+
+  const [modalActive, setModalActive] = useState(true);
 
     let todoItems = [
         {id: 1, isSelected: false, category: 'Эстетический уход', subcategory: 'Очищение', brand: '-', goods: '-', cashback: '20%'},
@@ -74,6 +80,7 @@ const TableTask = () => {
         {todoItems.map((todoItem) => (
           <Todo todoItem={todoItem} />
         ))}
+        {modalActive && <Modal />}
       </div>
     </div>
   );
