@@ -71,7 +71,9 @@ const TableTask = () => {
             <div className="cashback">Кэшбек</div>
           </div>
         </div>
-        <Todo todoItems = {todoItems} />
+        {todoItems.map((todoItem) => (
+          <Todo todoItem={todoItem} />
+        ))}
       </div>
     </div>
   );

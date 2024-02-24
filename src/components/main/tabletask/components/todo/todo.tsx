@@ -1,42 +1,32 @@
 import React from "react";
 import "./style.css";
+import { TodoProps } from "./todoProps";
 
-type TodoObjType = {
-  category: string;
-  subcategory: string;
-  brand: string;
-  goods: string;
-  cashback: string;
-  isSelected: boolean;
-};
-
-type TodoType = {
-  todoItems: Array<TodoObjType>
-};
-
-const todo = (props: TodoType) => {
+const todo = (props: TodoProps) => {
   
+  const { todoItem } = props;
+
   return (
     
     <div>
       <div className="table_header table_todo">
         <div className="checkbox_container">
-          <input checked={props.todoItems[0].isSelected} type="checkbox" className="checkbox" />
+          <input checked={todoItem.isSelected} type="checkbox" className="checkbox" />
         </div>
         <div className="category_container">
-          <div className="category">{props.todoItems[0].category}</div>
+          <div className="category">{todoItem.category}</div>
         </div>
         <div className="subcategory_container">
-          <div className="Subcategory">Подкатегория</div>
+          <div className="Subcategory">{todoItem.subcategory}</div>
         </div>
         <div className="brand_container">
-          <div className="Brand">Брэнд</div>
+          <div className="Brand">{todoItem.brand}</div>
         </div>
         <div className="goods_container">
-          <div className="goods">Товары</div>
+          <div className="goods">{todoItem.goods}</div>
         </div>
         <div className="cashback_container">
-          <div className="cashback">Кэшбек</div>
+          <div className="cashback">{todoItem.cashback}</div>
         </div>
       </div>
     </div>
